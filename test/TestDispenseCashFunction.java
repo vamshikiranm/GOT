@@ -13,7 +13,7 @@ public class TestDispenseCashFunction {
     @ValueSource(ints = { 1000, 10002 })
     void testDispenseCash_AmountEnteredByUserIsAvailable(int amountEnteredByUser) {
         cashMachine.dispenseCash(amountEnteredByUser);
-        assertEquals(cashMachine.amountOfCashInCashMachine, 100000 - amountEnteredByUser);
+        assertEquals(cashMachine.amountDispensedFromTheMachine, amountEnteredByUser);
     }
 
     @ParameterizedTest
