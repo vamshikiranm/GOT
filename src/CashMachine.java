@@ -1,6 +1,8 @@
+
 public class CashMachine {
     int amountOfCashInCashMachine;
     int amountDispensedFromTheMachine;
+    RefillCashMachine jonSnow = new RefillCashMachine();
 
     CashMachine() {
         this.amountOfCashInCashMachine = 100000;
@@ -9,13 +11,13 @@ public class CashMachine {
     void dispenseCash(int amountEnteredByUser) {
 
         if (amountEnteredByUser > amountOfCashInCashMachine) {
-            System.out.println("CashAvailable in machine: " + amountOfCashInCashMachine);
-            System.out.println("Entered amount by user: " + amountEnteredByUser);
 
+            jonSnow.refillingCashMachine(this);
             amountDispensedFromTheMachine = 2 * amountEnteredByUser;
             dispenseCash(amountDispensedFromTheMachine);
 
         } else {
+
             amountDispensedFromTheMachine = amountEnteredByUser;
             this.amountOfCashInCashMachine -= amountDispensedFromTheMachine;
         }

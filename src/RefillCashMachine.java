@@ -1,6 +1,6 @@
 public class RefillCashMachine {
 
-    public void refillingCashMachine() {
-        System.out.println("Jon Snow refilling Cash");
+    public void refillingCashMachine(CashMachine cashMachine) {
+        cashMachine.amountOfCashInCashMachine += 2 * cashMachine.amountOfCashInCashMachine;
     }
 }
