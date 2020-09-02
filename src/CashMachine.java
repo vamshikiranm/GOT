@@ -20,6 +20,7 @@ public class CashMachine {
 
             amountDispensedFromTheMachine = amountEnteredByUser;
             this.amountOfCashInCashMachine -= amountDispensedFromTheMachine;
+
         }
     }
 
