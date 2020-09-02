@@ -1,0 +1,6 @@
+/**
+ * UsersOfCashMachine
+ */
+public class UsersOfCashMachine {
+
+}
