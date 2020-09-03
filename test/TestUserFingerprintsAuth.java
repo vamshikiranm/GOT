@@ -14,12 +14,18 @@ public class TestUserFingerprintsAuth {
     }
 
     @Test
-    public void testUserFingerprintInput_CorrectInput() {
-        assertTrue(authenticate.authenticateFingerprintInputs("10002"));
+    public void testUserFingerprintInputCorrectInput() {
+        String fingerprint = "10002";
+        boolean result;
+        result = authenticate.authenticateFingerprintInputs(fingerprint);
+        assertTrue(result);
     }
 
     @Test
-    public void testUserFingerprintInput_WrongInput() {
-        assertFalse(authenticate.authenticateFingerprintInputs("abcd"));
+    public void testUserFingerprintInputWrongInput() {
+        String fingerprint = "12929";
+        boolean result;
+        result = authenticate.authenticateFingerprintInputs(fingerprint);
+        assertFalse(result);
     }
 }
