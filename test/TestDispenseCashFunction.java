@@ -9,14 +9,14 @@ public class TestDispenseCashFunction {
     CashMachine cashMachine = new CashMachine();
 
     @Test
-    public void testDispenseCash_AmountEnteredByUserIsAvailable() {
+    public void testDispenseCashAmountEnteredByUserIsAvailable() {
         int amountEnteredByUser = 10000;
         cashMachine.dispenseCash(amountEnteredByUser);
         assertEquals(cashMachine.amountDispensedFromTheMachine, amountEnteredByUser);
     }
 
     @Test
-    public void testDispenseCash_AmountEnteredByUserIsUnavailable() {
+    public void testDispenseCashAmountEnteredByUserIsUnavailable() {
         int amountEnteredByUser = 100001;
         cashMachine.dispenseCash(amountEnteredByUser);
         assertEquals(cashMachine.amountDispensedFromTheMachine, 2 * amountEnteredByUser);
